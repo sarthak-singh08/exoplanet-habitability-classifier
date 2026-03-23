@@ -41,3 +41,11 @@ orbital_period = float(input("Enter orbital period: "))
 result = model.predict([[radius, temperature, orbital_period]])
 
 print("Habitable" if result[0] == 1 else "Not Habitable")
+####
+
+
+import matplotlib.pyplot as plt
+
+df["temperature"].plot(kind="bar")
+plt.title("Planet Temperature Comparison")
+plt.show()
