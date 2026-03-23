@@ -1,2 +1,13 @@
-# exoplanet-habitability-classifier
-Project to classify habitability of an exoplanet using planetary data by Machine Learning
+# EXOPLANET HABITABILITY CLASSIFIER
+
+This project uses a machine learning model to classify whether an exoplanet could be habitable based on its physical characteristics such as radius, temperature, and orbital period.
+
+## FEATURES
+- Decision Tree Classifier
+- Predicts habitability of exoplanets
+- Simple dataset and model implementation
+
+## TECH STACK
+- Python
+- Pandas
+- Scikit-learn
