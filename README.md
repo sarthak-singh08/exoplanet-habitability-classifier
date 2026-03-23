@@ -11,3 +11,5 @@ This project uses a machine learning model to classify whether an exoplanet coul
 - Python
 - Pandas
 - Scikit-learn
+
+  ****Inspired by real-world astrophysics research and NASA exoplanet datasets.
