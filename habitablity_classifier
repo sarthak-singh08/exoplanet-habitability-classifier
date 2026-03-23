@@ -1,0 +1,43 @@
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+
+data = [
+    [1.0, 288, 365, 1],
+    [6.8, 2600, 0.3, 0],
+    [1.1, 290, 370, 1],
+    [5.5, 1500, 10, 0],
+    [0.9, 280, 360, 1],
+    [7.0, 2000, 5, 0]]
+
+df = pd.DataFrame(data, columns=["radius", "temperature", "orbital_period", "habitable"])
+
+X = df[["radius", "temperature", "orbital_period"]]
+y = df["habitable"]
+
+model = DecisionTreeClassifier()
+model.fit(X, y)
+
+test = [[1.2, 300, 350]]
+prediction = model.predict(test)
+
+print("Prediction (1 = Habitable, 0 = Not Habitable):", prediction[0])
+#######
+
+
+import matplotlib.pyplot as plt
+
+df["temperature"].plot(kind="bar")
+plt.title("Planet Temperature Comparison")
+plt.xlabel("Planet Index")
+plt.ylabel("Temperature (K)")
+plt.show()
+########
+
+
+radius = float(input("Enter planet radius: "))
+temperature = float(input("Enter temperature: "))
+orbital_period = float(input("Enter orbital period: "))
+
+result = model.predict([[radius, temperature, orbital_period]])
+
+print("Habitable" if result[0] == 1 else "Not Habitable")
